@@ -4,7 +4,6 @@ use num_enum::TryFromPrimitiveError;
 
 #[allow(unused_imports)]
 use alloc::string::String;
-use utoipa::ToSchema;
 // When adding a new chain:
 //   1. add new variant to the NamedChain enum;
 //   2. add extra information in the last `impl` block (explorer URLs, block time) when applicable;
@@ -25,7 +24,7 @@ use utoipa::ToSchema;
 // do not use the same case style.
 
 /// An Ethereum EIP-155 chain.
-#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash, ToSchema)]
+#[derive(Clone, Copy, Debug, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[derive(strum::IntoStaticStr)] // Into<&'static str>, AsRef<str>, fmt::Display and serde::Serialize
 #[derive(strum::VariantNames)] // NamedChain::VARIANTS
 #[derive(strum::VariantArray)] // NamedChain::VARIANTS
