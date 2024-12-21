@@ -478,10 +478,10 @@ pub enum NamedChain {
 
     Degen = 666666666,
 
-    #[strum(to_string = "opbnb-mainnet")]
+    #[strum(to_string = "opbnb-mainnet", serialize="opbnb-mainnet", serialize="op-bnb-mainnet", serialize="op-bnb", serialize="opbnb")]
     #[cfg_attr(
         feature = "serde",
-        serde(rename = "opbnb_mainnet", alias = "opbnb-mainnet", alias = "op-bnb-mainnet")
+        serde(rename = "opbnb_mainnet", alias = "opbnb-mainnet", alias = "op-bnb-mainnet", alias="op-bnb", alias="opbnb")
     )]
     OpBNBMainnet = 204,
     #[strum(to_string = "opbnb-testnet")]
