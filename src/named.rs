@@ -332,7 +332,8 @@ pub enum NamedChain {
         serialize = "avax c-chain",
         serialize = "avalanche c chain(avax cchain)",
         serialize = "avax_cchain",
-        serialize = "avaxc"
+        serialize = "avaxc",
+        serialize = "avalanche c"
     )]
     #[cfg_attr(
         feature = "serde",
@@ -346,6 +347,7 @@ pub enum NamedChain {
             alias = "avax_cchain",
             alias = "avaxc",
             alias = "avax",
+            alias = "avalanche c"
         )
     )]
     Avalanche = 43114,
